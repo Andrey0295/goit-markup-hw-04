@@ -120,29 +120,17 @@ h2 {
 .contact:focus {
   color: var(--accent-color);
 }
-.mail-adress ::before {
-  display: inline-block;
-  content: '';
+.mail-svg {
   width: 16px;
   height: 11.2px;
   margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: currentColor;
 }
-
-.phone ::before {
-  display: inline-block;
-  content: '';
+.tel-svg {
   width: 10px;
   height: 14.94px;
   margin-right: 10px;
-  /* background-color: var(--primery-text-color); */
-  background-image: url(../images/smartphone.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  fill: currentColor;
 }
 
 /* Стиллизация Hero */
@@ -151,19 +139,18 @@ h2 {
   margin: auto;
   padding: auto;
   margin-bottom: 94px;
-  padding-top: 200px;
-  padding-bottom: 280px;
+
+  padding: 200px 480px 280px 480px;
+
   width: 1600px;
   height: 600px;
-  /*временный юэкграунд */
+
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.8),
       rgba(0, 0, 0, 0.25)
     ),
     url(../images/header-img.jpg);
-
-  /* background-image: url(../images/header-img.jpg); */
 }
 
 .button-hero {
@@ -190,7 +177,6 @@ h2 {
 /* Нам месте background Будет фоновая картинка */
 .title-hero {
   color: #ffffff;
-  /* background-color: var(--title-text-color); */
 
   margin-top: 0px;
   margin-bottom: 30px;
@@ -220,9 +206,7 @@ h2 {
   margin-top: 0px;
   margin-bottom: 50px;
 }
-/* .first-icon {
-  background-color: teal;
-} */
+
 .advantage,
 .advantage-comment {
   margin-top: 0px;
@@ -238,29 +222,13 @@ h3.advantage {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.background-item::before {
-  display: block;
-  content: '';
+
+.advantage-svg {
   width: 270px;
   height: 120px;
-  margin-bottom: 30px;
-
   background-color: var(--secondary-background-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px, 70px;
-}
-.antenn::before {
-  background-image: url(../images/antenna-1.svg);
-}
-.clock::before {
-  background-image: url(../images/clock-1.svg);
-}
-.diagramm::before {
-  background-image: url(../images/diagram-1.svg);
-}
-.astronaut::before {
-  background-image: url(../images/astronaut-1.svg);
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 
 .advantage-comment {
@@ -322,6 +290,7 @@ figure {
   margin-left: 30px;
 }
 .name {
+  margin-top: 30px;
   color: var(--primery-text-color);
 
   font-weight: 500;
@@ -333,6 +302,7 @@ figure {
   letter-spacing: 0.03em;
 }
 .position {
+  margin-top: 10px;
   color: var(--title-text-color);
 
   font-weight: 400;
@@ -343,20 +313,42 @@ figure {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
 .social-link {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  margin-top: 16px;
+  margin-bottom: 24px;
   width: 44px;
   height: 44px;
-  
-  outline: 1px solid black;
-  
+  color: #afb1b8;
+  background-color: white;
+
+  border: none;
+  border-radius: 50%;
+}
+.social-link:nth-child(-n + 3) {
+  margin-right: 10px;
 }
 .social-link:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 .social-link:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
+.social-svg {
+  fill: currentColor;
+}
+
 /* Стилизация footer */
 .visit {
   background-color: var(--footer-color);
@@ -378,12 +370,23 @@ figure {
 .clients-title {
   margin-bottom: 50px;
 }
-/* .ouver-clients:hover {
+.ouver-clients {
+  color: #afb1b8;
+}
+
+.clients-svg {
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: currentColor;
+}
+
+.ouver-clients:hover {
   color: var(--accent-color);
 }
 .ouver-clients:focus {
   color: var(--accent-color);
-} */
+}
 
 /* Стилизация логотипа в футере */
 .test {
@@ -406,9 +409,6 @@ figure {
 }
 .foot-link {
   margin-left: 69px;
-  /* display: flex; */
-
-  /* justify-content: center; */
 }
 .foot-link ul {
   display: flex;
@@ -444,6 +444,7 @@ figure {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .author {
   color: rgba(255, 255, 255, 0.4);
 
@@ -455,12 +456,50 @@ figure {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.social:hover {
-  color: var(--accent-color);
+.foot-social {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  width: 44px;
+  height: 44px;
+  color: white;
+
+  border: none;
+  border-radius: 50%;
 }
-.social:focus {
-  color: var(--accent-color);
+.foot-social:nth-child(-n + 3) {
+  margin-right: 10px;
 }
+.foot-social.inst {
+  background-color: var(--footer-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.foot-social.face {
+  background-color: var(--footer-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.foot-social.linked-in {
+  background-color: var(--footer-color);
+
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.foot-social.twitt {
+  background-color: var(--footer-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.foot-social:hover {
+  background-color: var(--accent-color);
+}
+.foot-social:focus {
+  background-color: var(--accent-color);
+}
+
 /* Стиллизация страницы "Портфолио" */
 .navigation-portfolio {
   margin-bottom: 93px;
