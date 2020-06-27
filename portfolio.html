@@ -29,13 +29,21 @@
         </ul>
         <address>
           <ul class="list auth-nav">
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="link contact"
-                >info@devstudio.com</a
+            <li class="item mail-adress">
+              <a href="mailto:info@devstudio.com" class="link contact">
+                <svg class="mail-svg" aria-label="маленький конверт">
+                  <use href="./images/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="item">
-              <a href="tel:+380961111111" class="link contact">+380961111111</a>
+            <li class="item phone">
+              <a href="tel:+380961111111" class="link contact">
+                <svg class="tel-svg" aria-label="маленький телефон">
+                  <use href="./images/sprite.svg#icon-smartphone"></use>
+                </svg>
+                +380961111111</a
+              >
             </li>
           </ul>
         </address>
@@ -51,7 +59,7 @@
           <h2 class="visually-hidden">Галлерея услуг</h2>
           <ul class="list portfolio-item">
             <li>
-              <button type="button" class="first-button">
+              <button type="button" class="portfolio-button">
                 Все
               </button>
             </li>
@@ -226,10 +234,49 @@
         <div class="foot-link">
           <h2 class="call">Присоединяйтесь</h2>
           <ul class="list">
-            <li><a href="" class="social">instagram</a></li>
-            <li><a href="" class="social">facebook</a></li>
-            <li><a href="" class="social">twitter</a></li>
-            <li><a href="" class="social">linkedin</a></li>
+            <li>
+              <a href="" target="_blank" class="foot-social inst">
+                <svg
+                  class="inst-svg social-svg"
+                  width="20"
+                  height="20"
+                  aria-label="иконка инстаграм"
+                >
+                  <use href="./images/sprite.svg#icon-instagramm"></use>
+                </svg>
+              </a>
+
+              <a
+                href=""
+                target="_blank"
+                class="foot-social twitt"
+                aria-label="иконка твиттер"
+              >
+                <svg class="twitter-svg social-svg" width="20px" height="20px">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a href="" target="_blank" class="foot-social face">
+                <svg
+                  class="facebook-svg social-svg"
+                  width="20px"
+                  height="20px"
+                  aria-label="иконка фейсбук"
+                >
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a href="" target="_blank" class="foot-social">
+                <svg
+                  class="linkedin-svg social-svg"
+                  width="20"
+                  height="20"
+                  aria-label="иконка линкедин"
+                >
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

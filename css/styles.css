@@ -279,6 +279,8 @@ figure {
 .ouver-team {
   background-color: var(--secondary-background-color);
   margin-bottom: 94px;
+  padding-bottom: 94px;
+  padding-top: 94px;
   display: flex;
 }
 .ouver-team ul {
@@ -301,6 +303,7 @@ figure {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .position {
   margin-top: 10px;
   color: var(--title-text-color);
@@ -317,6 +320,12 @@ figure {
   display: flex;
   justify-content: center;
   padding: 0px;
+}
+.john,
+.marta,
+.robert,
+.martin {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .social-link {
   display: inline-flex;
@@ -528,24 +537,6 @@ p {
   margin-left: 8px;
   margin-bottom: 34px;
 }
-.first-button {
-  border-style: none;
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  font-family: Roboto;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  /* identical to box height, or 162% */
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  min-width: 73px;
-  min-height: 38px;
-  border-radius: 4px;
-  padding: 6px 22px;
-}
 
 .portfolio-button {
   border-style: none;
@@ -565,10 +556,12 @@ p {
   padding: 6px 22px;
 }
 .portfolio-button:hover {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 .portfolio-button:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 /* Стилизация галлереи */
 .flex-gallery {
@@ -583,6 +576,7 @@ p {
   /* outline: 1px solid black; */
   margin-right: 30px;
   margin-bottom: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .gallery-item:nth-child(3n) {
   margin-right: 0px;
