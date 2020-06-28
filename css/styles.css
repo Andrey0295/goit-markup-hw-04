@@ -411,7 +411,6 @@ figure {
   display: flex;
 
   flex-direction: column;
-  padding-top: 45px;
 }
 .footer-contact li {
   margin-bottom: 10px;
@@ -471,7 +470,7 @@ figure {
   text-align: center;
   padding: 0px;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   width: 44px;
   height: 44px;
   color: white;
