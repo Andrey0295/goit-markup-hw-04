@@ -261,8 +261,6 @@ figure {
 }
 .services {
   color: var(--white-color);
-  /* background-color поставленн, что бы не потерять надпись на белом фоне */
-  background-color: var(--title-text-color);
 
   font-weight: 700;
   font-size: 14px;
@@ -361,6 +359,8 @@ figure {
 /* Стилизация footer */
 .visit {
   background-color: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 /* Секция- Наши клиенты */
 .flex-block {
@@ -423,9 +423,6 @@ figure {
   display: flex;
   justify-content: center;
 }
-.call {
-  text-align: center;
-}
 
 .web-foot {
   color: var(--accent-color);
@@ -452,6 +449,7 @@ figure {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .author {
@@ -460,6 +458,7 @@ figure {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
+  align-self: flex-end;
   /* or 200% */
 
   text-align: center;
